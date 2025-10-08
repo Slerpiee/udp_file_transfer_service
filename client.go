@@ -121,7 +121,8 @@ func send_packets(){
 
 func init(){
 	var port string 
-	fmt.Scanf("Введите порт сервера: %s", &port)
+	fmt.Printf("Введите порт сервера: ")
+    fmt.Scan(&port)
 	addr := "127.0.0.1:" + port
 	remoteAddr, _ = net.ResolveUDPAddr("udp", addr)
 	global_file.md5 = make([]byte, 16)
@@ -132,7 +133,7 @@ func init(){
 
 func main() {
 	if len(os.Args) != 2{
-		log.Fatal("Введите имя файла")
+		log.Fatal("ERROR: File path did not provided")
 	}
 	con, err := net.ListenPacket("udp", "")
 	client = con

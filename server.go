@@ -170,7 +170,8 @@ func init(){
 
 func main(){
 	var port string 
-	fmt.Scanf("Введите порт сервера, который будет слушать пакеты: %s", &port)
+	fmt.Printf("Введите порт сервера, который будет слушать пакеты: ")
+    fmt.Scan(&port) 
 	addr := "127.0.0.1:" + port
 	con, err := net.ListenPacket("udp", addr)
 	server = con
