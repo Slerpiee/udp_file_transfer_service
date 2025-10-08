@@ -1,0 +1,12 @@
+
+*.exe
+
+
+
+go.work
+go.work.sum
+
+
+
+/storage/
+
