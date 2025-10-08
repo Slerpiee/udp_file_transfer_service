@@ -114,6 +114,7 @@ func send_packets(){
 		pack = append(pack, el...)
 		client.WriteTo(pack, remoteAddr)
 		time.Sleep(1*time.Millisecond)
+		
 	}
 }
 
